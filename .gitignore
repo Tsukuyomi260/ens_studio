@@ -1,0 +1,20 @@
+# Raw source media (not shipped — optimized copies live in assets/ & frames/)
+media/
+velse.mp4
+kling_20260804_VIDEO_Smooth_360_5495_0.mp4
+Generated Image*.png
+
+# Local dev server
+server.py
+__pycache__/
+*.pyc
+
+# Scratch / preview artifacts
+_*.png
+_probe/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vercel/
+node_modules/

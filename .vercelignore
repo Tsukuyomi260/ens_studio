@@ -1,0 +1,15 @@
+# Raw source media — the site only ships the optimized files in
+# assets/ and frames/, so the originals never need to be uploaded.
+media/
+velse.mp4
+kling_20260804_VIDEO_Smooth_360_5495_0.mp4
+Generated Image*.png
+
+# Local dev server (not used on Vercel)
+server.py
+__pycache__/
+*.pyc
+
+# Scratch / preview artifacts
+_*.png
+_probe/

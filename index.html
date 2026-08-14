@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Studio ENS — studio photo &amp; vidéo à Lokossa. Soutenances, galas, cérémonies, portraits de promotion et interviews." />
+  <meta name="theme-color" content="#FAFAF8" />
+  <title>Studio ENS — Photo &amp; Vidéo · Lokossa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B0B0C'/><text x='16' y='22' font-family='Helvetica,Arial' font-size='14' font-weight='700' fill='%23FAFAF8' text-anchor='middle'>E</text></svg>" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#studio">Aller au contenu</a>
+
+  <!-- ===================================================================
+       Header
+       =================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="#accueil" aria-label="Studio ENS — accueil">
+        <span class="wordmark__mark">ENS</span>
+        <span class="wordmark__sep" aria-hidden="true"></span>
+        <span class="wordmark__note">Studio</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#studio"><span>Studio</span></a></li>
+          <li><a class="nav__link" href="#services"><span>Services</span></a></li>
+          <li><a class="nav__link" href="#realisations"><span>Réalisations</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__end">
+        <a class="btn btn--sm" href="#contact">
+          <span>Nous écrire</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <nav aria-label="Navigation mobile">
+      <ul class="mobile-nav__list">
+        <li style="--d:0ms"><a href="#studio">Studio</a></li>
+        <li style="--d:40ms"><a href="#services">Services</a></li>
+        <li style="--d:80ms"><a href="#realisations">Réalisations</a></li>
+        <li style="--d:120ms"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav__foot">
+      <a href="mailto:ensetstudio@gmail.com">ensetstudio@gmail.com</a>
+      <span>Lokossa, BJ</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- =================================================================
+         Stage — scroll-scrubbed frame sequence
+         ================================================================= -->
+    <section class="stage" id="accueil">
+      <div class="stage__pin">
+
+        <canvas id="scene" aria-hidden="true"></canvas>
+
+        <div class="hero" id="hero">
+          <p class="eyebrow">Studio ENS <span aria-hidden="true">—</span> Lokossa</p>
+          <h1 class="headline">
+            Nous fabriquons<br />
+            <em>des images</em> qui tiennent.
+          </h1>
+          <p class="hero__sub">
+            Photo &amp; vidéo à Lokossa. Soutenances, galas, cérémonies et
+            portraits — capturés pour durer.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#realisations"><span>Voir les réalisations</span></a>
+            <a class="btn btn--ghost" href="#contact"><span>Démarrer un projet</span></a>
+          </div>
+        </div>
+
+        <!-- Captions that swap as the camera comes apart -->
+        <div class="chapters" aria-hidden="true">
+          <p class="chapter" data-chapter="0">Un boîtier. Un objectif. Une intention.</p>
+          <p class="chapter" data-chapter="1">Puis tout se décompose.</p>
+          <p class="chapter" data-chapter="2">C’est là que commence notre travail.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Studio / manifeste
+         ================================================================= -->
+    <section class="section section--studio" id="studio">
+      <div class="wrap">
+        <p class="section__label" data-reveal><span class="section__num">01</span> Studio</p>
+
+        <div class="studio-intro">
+          <p class="lede" data-reveal style="--d:60ms">
+            ENS est un studio d’image basé à Lokossa. Nous couvrons soutenances,
+            galas et cérémonies, et travaillons la lumière et le portrait
+            <em>pour de vrai</em> — pour qu’on s’en souvienne.
+          </p>
+          <figure class="studio-figure" data-reveal style="--d:120ms">
+            <img src="./assets/studio.webp" alt="Portrait réalisé en studio par ENSET Studio" width="1000" height="1772" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+
+        <div class="studio-grid">
+          <div class="studio-grid__col" data-reveal style="--d:0ms">
+            <h3>Une équipe, pas une chaîne</h3>
+            <p>
+              La personne qui cadre est la personne qui étalonne. Pas de
+              sous-traitance invisible, pas de fichier qui traverse six mains
+              avant d’arriver chez vous.
+            </p>
+          </div>
+          <div class="studio-grid__col" data-reveal style="--d:60ms">
+            <h3>Le détail avant l’effet</h3>
+            <p>
+              Un reflet mal placé se voit. Un raccord approximatif se sent.
+              Nous passons le temps qu’il faut sur ce que personne ne
+              remarquera consciemment.
+            </p>
+          </div>
+          <div class="studio-grid__col" data-reveal style="--d:120ms">
+            <h3>Livrable, pas moodboard</h3>
+            <p>
+              Vous repartez avec des fichiers prêts à publier : formats web,
+              print, réseaux, déclinaisons. Nommés, calibrés, versionnés.
+            </p>
+          </div>
+        </div>
+
+        <ul class="stats" aria-label="Chiffres du studio">
+          <li data-reveal style="--d:0ms"><b>2026</b><span>Année de fondation</span></li>
+          <li data-reveal style="--d:60ms"><b>20+</b><span>Projets livrés</span></li>
+          <li data-reveal style="--d:120ms"><b>100 m²</b><span>Studio</span></li>
+          <li data-reveal style="--d:180ms"><b>7</b><span>Personnes</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Services
+         ================================================================= -->
+    <section class="section section--services" id="services">
+      <div class="wrap">
+        <p class="section__label" data-reveal><span class="section__num">02</span> Services</p>
+        <h2 class="section__title" data-reveal style="--d:60ms">
+          Quatre façons de travailler ensemble.
+        </h2>
+
+        <ul class="services">
+          <li class="service" data-reveal style="--d:0ms">
+            <span class="service__num">01</span>
+            <div class="service__body">
+              <h3 class="service__title">Événementiel &amp; reportage</h3>
+              <p class="service__desc">
+                Soutenances (Licence &amp; Master), galas, cérémonies. Couverture
+                photo complète, du début à la remise des diplômes.
+              </p>
+            </div>
+            <span class="service__meta">ENSET · INSTI · UNSTIM</span>
+          </li>
+
+          <li class="service" data-reveal style="--d:60ms">
+            <span class="service__num">02</span>
+            <div class="service__body">
+              <h3 class="service__title">Portrait studio</h3>
+              <p class="service__desc">
+                Portraits de promotion, individuels et de groupe, sur fond
+                travaillé. Lumière soignée, retouche incluse.
+              </p>
+            </div>
+            <span class="service__meta">Studio · Lokossa</span>
+          </li>
+
+          <li class="service" data-reveal style="--d:120ms">
+            <span class="service__num">03</span>
+            <div class="service__body">
+              <h3 class="service__title">Vidéo &amp; interviews</h3>
+              <p class="service__desc">
+                Captation, interviews, formats réseaux. Prise de son cravate,
+                montage et habillage.
+              </p>
+            </div>
+            <span class="service__meta">Tournage · Montage</span>
+          </li>
+
+          <li class="service" data-reveal style="--d:180ms">
+            <span class="service__num">04</span>
+            <div class="service__body">
+              <h3 class="service__title">Retouche &amp; livraison</h3>
+              <p class="service__desc">
+                Sélection, retouche, colorimétrie et livraison multi-formats
+                prêts à imprimer et à publier.
+              </p>
+            </div>
+            <span class="service__meta">Sur mesure</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Réalisations
+         ================================================================= -->
+    <section class="section section--work" id="realisations">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__label" data-reveal><span class="section__num">03</span> Réalisations</p>
+          <p class="section__aside" data-reveal style="--d:60ms">Sélection 2026</p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work work--wide" data-reveal style="--d:0ms">
+            <a class="work__link" href="#contact">
+              <span class="work__media">
+                <img src="./assets/work/interview.webp" alt="Interview en studio, micro-cravate, plateau ENSET Studio" loading="lazy" decoding="async" width="1600" height="901" />
+              </span>
+              <span class="work__meta">
+                <span class="work__title">Interviews &amp; captation</span>
+                <span class="work__tags">Vidéo · 2026</span>
+              </span>
+            </a>
+          </article>
+
+          <article class="work" data-reveal style="--d:60ms">
+            <a class="work__link" href="#contact">
+              <span class="work__media">
+                <img src="./assets/work/portraits.webp" alt="Portrait studio de deux étudiants sur fond bleu" loading="lazy" decoding="async" width="1090" height="1444" />
+              </span>
+              <span class="work__meta">
+                <span class="work__title">Portraits de promotion</span>
+                <span class="work__tags">Studio · 2026</span>
+              </span>
+            </a>
+          </article>
+
+          <article class="work" data-reveal style="--d:120ms">
+            <a class="work__link" href="#contact">
+              <span class="work__media">
+                <img src="./assets/work/ceremonie.webp" alt="Invités lors d’une cérémonie couverte par le studio" loading="lazy" decoding="async" width="942" height="1672" />
+              </span>
+              <span class="work__meta">
+                <span class="work__title">Cérémonies &amp; soutenances</span>
+                <span class="work__tags">Reportage · 2026</span>
+              </span>
+            </a>
+          </article>
+
+          <article class="work" data-reveal style="--d:0ms">
+            <a class="work__link" href="#contact">
+              <span class="work__media">
+                <img src="./assets/work/table.webp" alt="Art de la table lors d’une réception" loading="lazy" decoding="async" width="1100" height="1464" />
+              </span>
+              <span class="work__meta">
+                <span class="work__title">Art de la table</span>
+                <span class="work__tags">Détail · 2026</span>
+              </span>
+            </a>
+          </article>
+
+          <article class="work work--wide" data-reveal style="--d:60ms">
+            <a class="work__link" href="#contact">
+              <span class="work__media">
+                <img src="./assets/work/gala.webp" alt="Table dressée pour un gala, vin et décoration" loading="lazy" decoding="async" width="1600" height="1067" />
+              </span>
+              <span class="work__meta">
+                <span class="work__title">Galas &amp; réceptions</span>
+                <span class="work__tags">Événementiel · 2026</span>
+              </span>
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Clients marquee -->
+      <div class="marquee" aria-label="Ce que nous couvrons">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Soutenances</span><span>Galas</span><span>Portraits</span>
+            <span>Interviews</span><span>Cérémonies</span><span>ENSET</span>
+            <span>INSTI</span><span>UNSTIM</span>
+          </div>
+          <div class="marquee__group" aria-hidden="true">
+            <span>Soutenances</span><span>Galas</span><span>Portraits</span>
+            <span>Interviews</span><span>Cérémonies</span><span>ENSET</span>
+            <span>INSTI</span><span>UNSTIM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Showreel — click to play (poster + lazy video, no autoplay) -->
+      <div class="wrap">
+        <div class="reel" data-reveal>
+          <p class="reel__label">Showreel 2026</p>
+          <button class="reel__btn" id="reel-btn" type="button" aria-label="Lire le showreel">
+            <img class="reel__poster" src="./assets/showreel-poster.webp" alt="Aperçu du showreel ENSET Studio" width="1280" height="720" loading="lazy" decoding="async" />
+            <span class="reel__play" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Contact
+         ================================================================= -->
+    <section class="section section--contact" id="contact">
+      <div class="wrap">
+        <p class="section__label" data-reveal><span class="section__num">04</span> Contact</p>
+        <h2 class="section__title section__title--lg" data-reveal style="--d:60ms">
+          Un projet ?<br /><em>Parlons-en.</em>
+        </h2>
+
+        <div class="contact">
+          <form class="form" id="contact-form" novalidate data-reveal>
+            <div class="field">
+              <label for="f-name">Nom</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Camille Roux" />
+            </div>
+            <div class="field">
+              <label for="f-email">E-mail</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="camille@marque.fr" />
+            </div>
+            <div class="field field--full">
+              <label for="f-scope">Type de projet</label>
+              <div class="chips" role="group" aria-label="Type de projet">
+                <label class="chip"><input type="checkbox" name="scope" value="Photographie" /><span>Photographie</span></label>
+                <label class="chip"><input type="checkbox" name="scope" value="Film" /><span>Film</span></label>
+                <label class="chip"><input type="checkbox" name="scope" value="Direction artistique" /><span>Direction artistique</span></label>
+                <label class="chip"><input type="checkbox" name="scope" value="Post-production" /><span>Post-production</span></label>
+              </div>
+            </div>
+            <div class="field field--full">
+              <label for="f-msg">Le projet en quelques lignes</label>
+              <textarea id="f-msg" name="message" rows="4" required placeholder="Ce que vous voulez montrer, pour qui, et pour quand."></textarea>
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--primary btn--lg" type="submit"><span>Envoyer</span></button>
+              <p class="form__note" id="form-note" role="status" aria-live="polite">
+                Réponse sous 48 h ouvrées.
+              </p>
+            </div>
+          </form>
+
+          <aside class="contact__aside" data-reveal style="--d:80ms">
+            <div class="contact__block">
+              <h3>Écrire</h3>
+              <a class="link" href="mailto:ensetstudio@gmail.com">ensetstudio@gmail.com</a>
+              <a class="link" href="https://wa.me/2290144387642">WhatsApp · 01 44 38 76 42</a>
+            </div>
+            <div class="contact__block">
+              <h3>Venir</h3>
+              <p>Lokossa<br />Mono, Bénin</p>
+            </div>
+            <div class="contact__block">
+              <h3>Suivre</h3>
+              <a class="link" href="https://www.tiktok.com/@enset_studio" target="_blank" rel="noopener">TikTok — @enset_studio</a>
+              <a class="link" href="https://wa.me/2290144387642" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span class="site-footer__mark">ENS</span>
+      <p>© <span id="year">2026</span> Studio ENS — Tous droits réservés.</p>
+      <a class="to-top" href="#accueil"><span>Haut de page</span></a>
+    </div>
+  </footer>
+
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="loader__inner">
+      <span class="loader__mark">ENS</span>
+      <span class="loader__bar"><i id="loader-bar"></i></span>
+      <span class="loader__pct" id="loader-pct">0 %</span>
+    </div>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
