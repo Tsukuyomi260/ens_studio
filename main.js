@@ -496,3 +496,45 @@ if (reelBtn) {
     { once: true }
   );
 }
+
+/* ===========================================================================
+   Contact form → WhatsApp. On submit we compose the message from the fields
+   and open a wa.me chat, prefilled. No backend, no mailbox needed.
+   =========================================================================== */
+
+const WHATSAPP_NUMBER = "2290144387642"; // +229, sans le +
+
+const contactForm = document.getElementById("contact-form");
+const formNote = document.getElementById("form-note");
+
+if (contactForm) {
+  const setNote = (msg) => {
+    if (formNote) formNote.textContent = msg;
+  };
+
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const fd = new FormData(contactForm);
+    const name = (fd.get("name") || "").toString().trim();
+    const email = (fd.get("email") || "").toString().trim();
+    const scopes = fd.getAll("scope").join(", ") || "—";
+    const message = (fd.get("message") || "").toString().trim();
+
+    const text =
+      `Bonjour Studio ENS 👋\n\n` +
+      `Nom : ${name}\n` +
+      `E-mail : ${email}\n` +
+      `Type : ${scopes}\n\n` +
+      `Projet :\n${message}`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    setNote("Ouverture de WhatsApp…");
+    window.open(url, "_blank", "noopener");
+  });
+}

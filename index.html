@@ -329,6 +329,8 @@
         </h2>
 
         <div class="contact">
+          <!-- À l'envoi, le formulaire ouvre WhatsApp avec le message pré-rempli
+               (aucun backend, aucune boîte mail requise). -->
           <form class="form" id="contact-form" novalidate data-reveal>
             <div class="field">
               <label for="f-name">Nom</label>
@@ -341,10 +343,10 @@
             <div class="field field--full">
               <label for="f-scope">Type de projet</label>
               <div class="chips" role="group" aria-label="Type de projet">
-                <label class="chip"><input type="checkbox" name="scope" value="Photographie" /><span>Photographie</span></label>
-                <label class="chip"><input type="checkbox" name="scope" value="Film" /><span>Film</span></label>
-                <label class="chip"><input type="checkbox" name="scope" value="Direction artistique" /><span>Direction artistique</span></label>
-                <label class="chip"><input type="checkbox" name="scope" value="Post-production" /><span>Post-production</span></label>
+                <label class="chip"><input type="checkbox" name="scope" value="Soutenance" /><span>Soutenance</span></label>
+                <label class="chip"><input type="checkbox" name="scope" value="Gala / Événement" /><span>Gala / Événement</span></label>
+                <label class="chip"><input type="checkbox" name="scope" value="Portrait" /><span>Portrait</span></label>
+                <label class="chip"><input type="checkbox" name="scope" value="Vidéo / Interview" /><span>Vidéo / Interview</span></label>
               </div>
             </div>
             <div class="field field--full">
@@ -352,9 +354,9 @@
               <textarea id="f-msg" name="message" rows="4" required placeholder="Ce que vous voulez montrer, pour qui, et pour quand."></textarea>
             </div>
             <div class="form__foot">
-              <button class="btn btn--primary btn--lg" type="submit"><span>Envoyer</span></button>
+              <button class="btn btn--primary btn--lg" type="submit"><span>Envoyer via WhatsApp</span></button>
               <p class="form__note" id="form-note" role="status" aria-live="polite">
-                Réponse sous 48 h ouvrées.
+                Le bouton ouvre WhatsApp avec votre message pré-rempli.
               </p>
             </div>
           </form>
