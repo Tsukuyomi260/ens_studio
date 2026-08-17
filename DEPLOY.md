@@ -33,5 +33,8 @@ python server.py 8010    # http://127.0.0.1:8010
 ```
 
 ## À vérifier avant prod
+- **Meta partage** : dans `index.html`, remplacer `VOTRE-DOMAINE` par le vrai domaine
+  (ex: `studio-ens.vercel.app`) dans les balises `og:url`, `og:image`, `twitter:image`.
+  Sinon l'aperçu de partage (WhatsApp/Facebook) ne montrera pas l'image.
 - Indicatif WhatsApp `wa.me/2290144387642` (supposé +229 Bénin).
 - three.js chargé via CDN unpkg (externe) — OK sur Vercel.
