@@ -37,4 +37,5 @@ python server.py 8010    # http://127.0.0.1:8010
   (ex: `studio-ens.vercel.app`) dans les balises `og:url`, `og:image`, `twitter:image`.
   Sinon l'aperçu de partage (WhatsApp/Facebook) ne montrera pas l'image.
 - Indicatif WhatsApp `wa.me/2290144387642` (supposé +229 Bénin).
-- three.js chargé via CDN unpkg (externe) — OK sur Vercel.
+- three.js est **auto-hébergé** (`assets/vendor/three.module.js`) — aucune
+  dépendance CDN, le hero ne peut pas rester bloqué si un CDN est lent/bloqué.

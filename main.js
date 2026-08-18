@@ -414,60 +414,6 @@ window.addEventListener("resize", () => {
 });
 
 /* ===========================================================================
-   Contact form
-   No backend here — the submit composes a mail draft. Swap this for a real
-   endpoint (Formspree, Resend, a serverless handler) before going live.
-   =========================================================================== */
-
-const form = document.getElementById("contact-form");
-const formNote = document.getElementById("form-note");
-const MAILTO = "bonjour@studio-ens.fr";
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const data = new FormData(form);
-  const name = String(data.get("name") || "").trim();
-  const email = String(data.get("email") || "").trim();
-  const message = String(data.get("message") || "").trim();
-  const scope = data.getAll("scope");
-
-  const invalid = [];
-  if (!name) invalid.push(form.elements.name);
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) invalid.push(form.elements.email);
-  if (!message) invalid.push(form.elements.message);
-
-  [form.elements.name, form.elements.email, form.elements.message].forEach((el) =>
-    el.removeAttribute("aria-invalid")
-  );
-
-  if (invalid.length) {
-    invalid.forEach((el) => el.setAttribute("aria-invalid", "true"));
-    formNote.textContent = "Merci de compléter les champs manquants.";
-    formNote.className = "form__note is-error";
-    invalid[0].focus();
-    return;
-  }
-
-  const subject = `Projet — ${name}${scope.length ? ` (${scope.join(", ")})` : ""}`;
-  const body = [
-    `Nom : ${name}`,
-    `E-mail : ${email}`,
-    scope.length ? `Type : ${scope.join(", ")}` : null,
-    "",
-    message,
-  ]
-    .filter(Boolean)
-    .join("\n");
-
-  window.location.href =
-    `mailto:${MAILTO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  formNote.textContent = "Votre logiciel de messagerie s’ouvre…";
-  formNote.className = "form__note is-ok";
-});
-
-/* ===========================================================================
    Misc
    =========================================================================== */
 
