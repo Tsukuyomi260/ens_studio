@@ -513,6 +513,11 @@ button, input, textarea { font: inherit; color: inherit; }
 
 .section { padding-block: clamp(88px, 13vw, 168px); }
 
+/* Tighten the seam between Services and Réalisations — the doubled section
+   padding left a huge empty band there. */
+.section--services { padding-bottom: clamp(36px, 5vw, 64px); }
+.section--work { padding-top: clamp(36px, 5vw, 64px); }
+
 .section--studio {
   background: var(--surface);
   border-block: 1px solid var(--line-soft);
