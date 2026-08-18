@@ -1181,3 +1181,74 @@ button, input, textarea { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .reel__poster { transition: none; }
 }
+
+/* ===========================================================================
+   Floating WhatsApp CTA
+   =========================================================================== */
+
+.wa-fab {
+  position: fixed;
+  right: clamp(16px, 3vw, 28px);
+  bottom: clamp(16px, 3vw, 28px);
+  z-index: 80;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(11, 11, 12, 0.28), 0 2px 8px rgba(11, 11, 12, 0.18);
+  transition: transform var(--t-ui) var(--ease-out),
+              box-shadow var(--t-ui) var(--ease-out);
+}
+.wa-fab svg { width: 30px; height: 30px; display: block; }
+
+/* pulse ring */
+.wa-fab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #25D366;
+  z-index: -1;
+  animation: wa-pulse 2.6s var(--ease-out) infinite;
+}
+@keyframes wa-pulse {
+  0%   { transform: scale(1);   opacity: 0.45; }
+  70%  { transform: scale(1.9); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* label on hover (desktop) */
+.wa-fab__tip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  white-space: nowrap;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 12px;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-micro) var(--ease-out),
+              transform var(--t-micro) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .wa-fab:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 16px 44px rgba(37, 211, 102, 0.42);
+  }
+  .wa-fab:hover .wa-fab__tip { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+.wa-fab:active { transform: scale(0.95); }
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-fab { transition: none; }
+  .wa-fab::before { animation: none; }
+}
